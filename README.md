@@ -1,2 +1,2 @@
 # nixpkg-llm-hash-edit
-Nix flake for the LLM hashmap line editing CLI.
+Nix flake for `linehash` (`le`), the LLM hashmap line editing CLI.

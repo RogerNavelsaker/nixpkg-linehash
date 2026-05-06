@@ -1,33 +1,33 @@
 {
-  description = "Linehash Edit (le): Fast, deterministic line editing CLI for LLMs";
+  description = "linehash (le): Fast, deterministic line editing CLI for LLMs";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    linehash-edit-src = {
-      url = "github:RogerNavelsaker/linehash-edit";
+    linehash-src = {
+      url = "github:RogerNavelsaker/linehash";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, linehash-edit-src }:
+  outputs = { self, nixpkgs, flake-utils, linehash-src }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        linehash-edit = pkgs.rustPlatform.buildRustPackage {
-          pname = "linehash-edit";
+        linehash = pkgs.rustPlatform.buildRustPackage {
+          pname = "linehash";
           version = "0.1.0";
-          src = linehash-edit-src;
+          src = linehash-src;
           cargoLock = {
-            lockFile = "${linehash-edit-src}/Cargo.lock";
+            lockFile = "${linehash-src}/Cargo.lock";
             allowBuiltinFetchGit = true;
           };
         };
       in
       {
-        packages.default = linehash-edit;
-        packages.linehash-edit = linehash-edit;
-        packages.le = linehash-edit;
+        packages.default = linehash;
+        packages.linehash = linehash;
+        packages.le = linehash;
 
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [ cargo rustc rustfmt clippy ];
