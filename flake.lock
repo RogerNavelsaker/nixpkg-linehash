@@ -21,11 +21,11 @@
     "linehash-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1780402563,
-        "narHash": "sha256-/opYK7mzad4zHZ4XWCyv+y9lezLAeFWngarYd2ipaEE=",
+        "lastModified": 1780409063,
+        "narHash": "sha256-zft58XwINrteBtBB3ex9TayGuANGknyFb4Y7r9+E9EE=",
         "owner": "RogerNavelsaker",
         "repo": "linehash",
-        "rev": "ce530cd264e7c501b13e4d8a6702965dea45bca9",
+        "rev": "63cf612565b3cba5f61802b09a54ef61441989ab",
         "type": "github"
       },
       "original": {
