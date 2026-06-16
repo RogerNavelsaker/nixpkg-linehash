@@ -16,7 +16,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         linehash = pkgs.rustPlatform.buildRustPackage {
           pname = "linehash";
-          version = "0.1.0";
+          version = "0.1.0-ea07514";
           src = linehash-src;
           cargoLock = {
             lockFile = "${linehash-src}/Cargo.lock";
