@@ -1,0 +1,8 @@
+{
+  "kind": "git-head",
+  "upstream": "https://github.com/RogerNavelsaker/linehash.git",
+  "version_file": "flake.lock",
+  "version_jq": ".nodes[\"linehash-src\"].locked.rev",
+  "pinned_paths": [],
+  "sync_script": "bash update.sh"
+}
